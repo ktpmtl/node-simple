@@ -82,3 +82,8 @@ $(document).ready(function() {
 
     });
 });
+
+function logout() {
+    clearform();
+    $("#nameresult").text("ชื่อ: ");
+}
