@@ -189,8 +189,13 @@ button:hover {
     background-color: #506c6a;
 }
 
+button:disabled {
+  background-color: #70807f;
+  cursor: not-allowed;
+}
+
 .logout-btn {
-    margin-top: 150px;
+    margin-top: 120px;
     width: 250px;
     background-color: #92a9a8;
 }
@@ -225,4 +230,11 @@ input[type="password"] {
 .toggle-btn:hover {
     color: #506c6a;
     background-color: white;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 0px;
 }

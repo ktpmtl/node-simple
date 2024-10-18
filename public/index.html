@@ -5,26 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container" class="prompt-regular">
         <div class="login-container">
             <div class="login-box">
                 <h2 class="prompt-bold">LOGIN PAGE</h2>
-                <p class="prompt-regular">ชื่อ กฤติพงษ์ มากทองหลาง</p>
+                <p class="prompt-regular" id="nameresult">ชื่อ: </p>
                 <div class="input-form">
-                    <form>
-                        <input type="text" placeholder="Username">
+                    <form id="loginform">
+                        <input id="username" type="text" placeholder="Username" onchange="testSubmitbutton();">
+                        <p class="error" id="username_error" hidden>โปรดใส่ Username ให้เรียบร้อย</p>
                         <div class="password-container">
-                            <input type="password" id="password" placeholder="Password">
+                            <input type="password" id="password" placeholder="Password" onchange="testSubmitbutton();">
                             <button type="button" id="togglePassword" class="toggle-btn">👁</button>
                         </div>
-                        <select required class="prompt-regular">
+                        <p class="error" id="password_error" hidden>โปรดใส่ Password ให้เรียบร้อย</p>
+                        <select class="prompt-regular" id="role" onchange="testSubmitbutton();"">
                             <option value="">Select your role</option>
-                            <option value="admin">Student</option>
-                            <option value="user">Lecturer</option>
+                            <option value="student">Student</option>
+                            <option value="lecturer">Lecturer</option>
                         </select>
-                        <button type="submit">LOGIN</button>
+                        <p class="error" id="role_error" hidden>โปรดเลือกสถานะให้เรียบร้อย</p>
+                        <button type="submit" id="loginbtn" disabled>LOGIN</button>
                     </form>
                 </div>
                 <button class="logout-btn">LOGOUT</button>
